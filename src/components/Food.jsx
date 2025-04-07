@@ -70,7 +70,7 @@ export default function Food(props)
 
         console.log(trackData);
 
-        fetch("https://ntl.onrender.com/track",{
+        fetch("https://ntl-1.onrender.com/track",{
             method:"POST",
             body:JSON.stringify(trackData),
             headers:{
