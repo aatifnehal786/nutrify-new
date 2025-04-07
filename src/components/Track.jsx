@@ -35,14 +35,9 @@ export default function Track()
             .then((data)=>{
 
                 console.log(data);
-                if(data.message===undefined)
-                {
+                
                     setFoodItems(data);
-                }
-                else 
-                {
-                    setFoodItems([]);
-                }
+               
                 
             })
             .catch((err)=>{
