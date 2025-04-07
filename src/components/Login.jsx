@@ -21,7 +21,7 @@ export default function Login() {
         e.preventDefault();
         setIsLoading(true);
 
-        fetch("https://ntl.onrender.com/login", {
+        fetch("https://ntl-1.onrender.com/login", {
             method: "POST",
             body: JSON.stringify({ email: user.email, password: user.password }),
             headers: {
