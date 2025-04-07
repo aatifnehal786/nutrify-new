@@ -1,61 +1,75 @@
-
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import Register from './components/Register'
-import Login from './components/Login'
-import Track from './components/Track'
-import './App.css'
-import NotFound from './components/NotFound'
-import { UserContext } from './contexts/UserContext'
-import { useEffect, useState } from 'react'
-import Private from './components/Private'
-import Diet from './components/Diet'
-import ForgotPassword from './components/Forgot-password'
-import Otp from './components/Otp'
-import Unregister from './components/Un-register'
-
-
-
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+import Register from './components/Register';
+import Login from './components/Login';
+import Track from './components/Track';
+import './App.css';
+import NotFound from './components/NotFound';
+import { UserContext } from './contexts/UserContext';
+import { useState } from 'react';
+import Private from './components/Private';
+import Diet from './components/Diet';
+import ForgotPassword from './components/Forgot-password';
+import Otp from './components/Otp';
+import Unregister from './components/Un-register';
 
 function App() {
+  const [loggedUser, setLoggedUser] = useState(
+    JSON.parse(localStorage.getItem('nutrify-user'))
+  );
 
-  const [loggedUser,setLoggedUser] = useState(JSON.parse(localStorage.getItem("nutrify-user")))
-
-
-
-
-
-
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Login />,
+      errorElement: <NotFound />,
+    },
+    {
+      path: '/register',
+      element: <Register />,
+    },
+    {
+      path: '/login',
+      element: <Login />,
+    },
+    {
+      path: '/track',
+      element: <Private Component={Track} />,
+    },
+    {
+      path: '/diet',
+      element: <Private Component={Diet} />,
+    },
+    {
+      path: '/forgot-password',
+      element: <ForgotPassword />,
+    },
+    {
+      path: '/otp',
+      element: <Otp />,
+    },
+    {
+      path: '/un-register',
+      element: <Unregister />,
+    },
+    {
+      path: '*',
+      element: <NotFound />,
+    },
+  ], {
+    future: {
+      v7_relativeSplatPath: true,
+      v7_startTransition: true, // ✅ This resolves the warning you're seeing
+    },
+  });
 
   return (
-    
-    <UserContext.Provider value={{loggedUser,setLoggedUser}}>
-      <BrowserRouter>
-      <Routes>
-              <Route path='/' element={<Login/>} />
-              <Route path='/register' element={<Register/>}/>
-              <Route path='/login' element={<Login/>}/>
-              <Route path='/track' element={<Private Component={Track}/>}/>
-              <Route path='*' element={<NotFound/>}/>
-              <Route path="/diet" element={<Private Component={Diet}/>}/>
-              <Route path="/forgot-password" element={<ForgotPassword/>}/>
-              <Route path='/un-register' element={<Unregister/>}/>
-              
-              
-             
-              
-               
-                <Route path="/otp" element={<Otp/>}/>
-              
-            </Routes>
-      </BrowserRouter>
-            
-
-
+    <UserContext.Provider value={{ loggedUser, setLoggedUser }}>
+      <RouterProvider router={router} />
     </UserContext.Provider>
-
-
-    
-  )
+  );
 }
 
-export default App
+export default App;
