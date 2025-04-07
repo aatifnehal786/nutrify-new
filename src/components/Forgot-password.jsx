@@ -14,7 +14,7 @@ export default function ForgotPassword(){
 
         try {
             setIsLoading(true)
-           fetch("https://ntl-1.onrender.com/send-otp",{
+           fetch("https://ntl.onrender.com/send-otp",{
             method:"POST",
             body:JSON.stringify({email}),
             headers:{
