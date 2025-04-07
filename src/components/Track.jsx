@@ -10,14 +10,8 @@ export default function Track()
     const [foodItems,setFoodItems] = useState([]);
 
     const [food,setFood] = useState(null);
-    let [name,setName] = useState("")
-    
-   useEffect(()=>{
-    console.log(loggedData.loggedUser)
-    setName(loggedData.loggedUser.name)
-    console.log(name)
-    
-   },[])
+
+   
 
     function searchFood(event)
     {
@@ -35,9 +29,14 @@ export default function Track()
             .then((data)=>{
 
                 console.log(data);
-                
+                if(data.message===undefined)
+                {
                     setFoodItems(data);
-               
+                }
+                else 
+                {
+                    setFoodItems([]);
+                }
                 
             })
             .catch((err)=>{
@@ -60,9 +59,6 @@ export default function Track()
             <section className="container track-container">
 
                 <Header/>
-                <h2>Welcome {name}</h2>
-                <h4>Track Your Nutrition {name} By Just Searching any food Item That You have Eaten Tody </h4>
-                
 
                 <div className="search">
 
