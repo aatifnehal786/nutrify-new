@@ -23,7 +23,7 @@ export default function Diet()
 
     useEffect(()=>{
 
-        fetch(`https://ntl-1.onrender.com/track/${loggedData.loggedUser.userid}/${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`,{
+        fetch(`https://ntl.onrender.com/track/${loggedData.loggedUser.userid}/${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`,{
             method:"GET",
             headers:{
                 "Authorization":`Bearer ${loggedData.loggedUser.token}`
