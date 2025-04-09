@@ -23,7 +23,7 @@ export default function Food(props)
 
        console.log(loggedData);
        
-    },[food])
+    },[props.food])
 
   
     function calculateMacros(event)
