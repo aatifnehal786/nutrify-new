@@ -76,7 +76,7 @@ export default function Track()
                                                 setFood(item);
                                                 setTimeout(()=>{
                                                     setFoodItems([])
-                                                },2000)
+                                                },5000)
                                             }} key={item._id}>{item.name}</p>
                                         )
                                     })
