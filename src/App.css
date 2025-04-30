@@ -279,14 +279,4 @@ a{
 }
 
 
-@media (min-width:450px) and (max-width:1800px){
-  .form img{
-    position: absolute;
-    width: 20px;
-    top: 50%;
-    left: 90%;
-    transform: translateX(50%);
-  
-  }
 
-}
