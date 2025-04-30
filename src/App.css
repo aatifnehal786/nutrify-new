@@ -282,8 +282,8 @@ a{
 @media (min-width:450px) and (max-width:1800px){
   .form img{
     position: absolute;
-    width: 18px;
-    top: 48%;
+    width: 20px;
+    top: 49%;
     left: 95%;
     transform: translateX(50%);
   
