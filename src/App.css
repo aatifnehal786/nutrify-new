@@ -43,8 +43,9 @@
 .form img{
   position: absolute;
   width: 18px;
-  top: 52%;
-  left: 90%;
+  top: 57%;
+  left: 88%;
+  padding: 5px
 /*   transform: translateX(50%); */
 
 }
@@ -280,11 +281,11 @@ a{
 
 @media (min-width:1220px) and (max-width:1800px) {
   .form img{
-
-    position: absolute;
-     width: 18px;
-     top: 52%;
-     left: 90%;
+ position: absolute;
+  width: 18px;
+  top: 57%;
+  left: 88%;
+  padding: 5px
 /*      transform: translateX(50%); */
   }
 }
