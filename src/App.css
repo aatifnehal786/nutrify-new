@@ -42,11 +42,11 @@
 }
 .form img{
   position: absolute;
-  width: 18px;
+  width: 20px;
   top: 50%;
-  left: 90%;
-/*   padding: 5px; */
-  transform: translateX(50%);
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
 
 }
 .btn{
@@ -279,15 +279,25 @@ a{
   color: antiquewhite;
 }
 
-@media (min-width:1220px) and (max-width:1800px) {
-  .form img{
- position: absolute;
-  width: 18px;
-  top: 50%;
-  left: 90%;
-  transform: translateX(50%);
+@media (max-width: 1220px) {
+  .form img {
+    right: 8px;
+    width: 18px;
+  }
+
+  .form input {
+    padding-right: 36px; /* Slightly smaller padding for smaller screens */
+  }
+
+  .form h1 {
+    font-size: 1.5rem; /* Example: reduce heading size for smaller screens */
+  }
+
+  .inp {
+    font-size: 1rem;
   }
 }
+
 
 
 
