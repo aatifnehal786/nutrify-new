@@ -8,6 +8,7 @@ export default function Login() {
     const [user, setUser] = useState({ email: "", password: "" });
     const [message, setMessage] = useState({ type: "", text: "" });
     const [isLoading, setIsLoading] = useState(false);
+     const [showHidePassword,setShowHidePassword] = useState(false)
     
     
 
@@ -16,6 +17,10 @@ export default function Login() {
     const handleInput = (e) => {
         setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     };
+
+        const togglePassword = ()=>{
+        setShowHidePassword(prev => !prev)
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -80,16 +85,18 @@ export default function Login() {
                     onChange={handleInput}
                     value={user.email}
                 />
-                <input
+                 <input
                     className="inp"
-                    type="password"
+                    type={showHidePassword ? "text" : "password"}
                     placeholder="Enter Password"
                     maxLength={16}
                     onChange={handleInput}
                     required
                     name="password"
                     value={user.password}
+                    
                 />
+                <img onClick={togglePassword} src={showHidePassword ? show : hide} alt="" />
                 <button type="submit" className="btn" disabled={isLoading}>
                     {isLoading ? "Loading..." : "Join"}
                 </button>
