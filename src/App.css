@@ -43,8 +43,8 @@
 .form img{
   position: absolute;
   width: 18px;
-  top: 50%;
-  left: 80%;
+  top: 48%;
+  left: 90%;
   transform: translateX(50%);
 
 }
