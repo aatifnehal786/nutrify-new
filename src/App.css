@@ -278,13 +278,13 @@ a{
   color: antiquewhite;
 }
 
-@media (max-width:1220px) {
+@media (min-width:1220px) and (max-width:1800px) {
   .form img{
 
     position: absolute;
      width: 18px;
      top: 48%;
-     left: 110%;
+     left: 95%;
      transform: translateX(50%);
   }
 }
