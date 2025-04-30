@@ -279,12 +279,12 @@ a{
 }
 
 
-@media (min-width:450px) and (max-width:1800px){
+@media (min-width:450px){
   .form img{
     position: absolute;
     width: 20px;
-    top: 49%;
-    left: 95%;
+    top: 50%;
+    left: 50%;
     transform: translateX(50%);
   
   }
