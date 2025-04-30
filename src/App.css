@@ -44,7 +44,7 @@
   position: absolute;
   width: 20px;
   top: 50%;
-  right: 5px;
+  right: 2px;
   transform: translateY(-50%);
   cursor: pointer;
 
@@ -281,7 +281,7 @@ a{
 
 @media (max-width: 1220px) {
   .form img {
-    right: 8px;
+    right: 5px;
     width: 18px;
   }
 
