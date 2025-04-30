@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../contexts/UserContext";
+import show from '../assets/show.png'
+import hide from '../assets/hide.png'
 
 
 export default function Login() {
@@ -8,19 +10,28 @@ export default function Login() {
     const [user, setUser] = useState({ email: "", password: "" });
     const [message, setMessage] = useState({ type: "", text: "" });
     const [isLoading, setIsLoading] = useState(false);
-     const [showHidePassword,setShowHidePassword] = useState(false)
+    const [showHidePassword,setShowHidePassword] = useState(false)
     
     
 
     const navigate = useNavigate();
 
+   
+
+   
+
+    
     const handleInput = (e) => {
         setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+       
+        
     };
 
-        const togglePassword = ()=>{
+    const togglePassword = ()=>{
         setShowHidePassword(prev => !prev)
     }
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -85,7 +96,7 @@ export default function Login() {
                     onChange={handleInput}
                     value={user.email}
                 />
-                 <input
+                <input
                     className="inp"
                     type={showHidePassword ? "text" : "password"}
                     placeholder="Enter Password"
