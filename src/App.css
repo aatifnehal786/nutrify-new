@@ -25,6 +25,7 @@
   
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
   
   
  
@@ -37,16 +38,15 @@
  outline: none;
  border: 1px solid gray;
  border-radius: 10px;
- position: relative;
+
 
 }
 .form img{
   position: absolute;
-  width: 20px;
-  top: 50%;
-  right: 2px;
-  transform: translateY(-50%);
-  cursor: pointer;
+  width: 18px;
+  top: 44%;
+  left: 97%;
+  transform: translateX(50%);
 
 }
 .btn{
@@ -279,25 +279,78 @@ a{
   color: antiquewhite;
 }
 
-@media (max-width: 1220px) {
-  .form img {
-    right: 5px;
+
+
+@media only screen and (max-width: 600px) {
+  .form{
+    position: relative;
+
+  }
+  .form img{
+    position: absolute;
     width: 18px;
-  }
-
-  .form input {
-    padding-right: 36px; /* Slightly smaller padding for smaller screens */
-  }
-
-  .form h1 {
-    font-size: 1.5rem; /* Example: reduce heading size for smaller screens */
-  }
-
-  .inp {
-    font-size: 1rem;
+    top: 44%;
+    left: 97%;
+    transform: translateX(50%);
   }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .form{
+    position: relative;
 
+  }
+  .form img{
+    position: absolute;
+    width: 18px;
+    top: 44%;
+    left: 97%;
+    transform: translateX(50%);
+  }
+}
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   .form{
+    position: relative;
 
+  }
+  .form img{
+    position: absolute;
+    width: 18px;
+    top: 44%;
+    left: 97%;
+    transform: translateX(50%);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   .form{
+    position: relative;
+
+  }
+  .form img{
+    position: absolute;
+    width: 18px;
+    top: 44%;
+    left: 97%;
+    transform: translateX(50%);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   .form{
+    position: relative;
+
+  }
+  .form img{
+    position: absolute;
+    width: 18px;
+    top: 44%;
+    left: 97%;
+    transform: translateX(50%);
+  }
+}
