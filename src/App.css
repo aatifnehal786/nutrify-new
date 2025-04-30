@@ -36,6 +36,16 @@
  outline: none;
  border: 1px solid gray;
  border-radius: 10px;
+  position: relative;
+
+}
+
+.form img{
+  position: absolute;
+  width: 18px;
+  top: 50%;
+  left: 80%;
+  transform: translateX(50%);
 
 }
 .btn{
@@ -266,4 +276,16 @@ a{
 
 .btn2{
   color: antiquewhite;
+}
+
+@media (min-width:450px) and (max-width:1800px){
+  .form img{
+    position: absolute;
+    width: 18px;
+    top: 47%;
+    left: 95%;
+    transform: translateX(50%);
+  
+  }
+
 }
