@@ -283,8 +283,8 @@ a{
 
     position: absolute;
      width: 18px;
-     top: 50%;
-     left: 0;
+     top: 49%;
+     left: 90%;
      transform: translateX(50%);
   }
 }
