@@ -44,7 +44,7 @@
   position: absolute;
   width: 18px;
   top: 48%;
-  left: 90%;
+  left: 110%;
   transform: translateX(50%);
 
 }
@@ -276,6 +276,17 @@ a{
 
 .btn2{
   color: antiquewhite;
+}
+
+@media (max-width:1220px) {
+  .form img{
+
+    position: absolute;
+     width: 18px;
+     top: 48%;
+     left: 110%;
+     transform: translateX(50%);
+  }
 }
 
 
