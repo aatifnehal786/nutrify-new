@@ -43,9 +43,9 @@
 .form img{
   position: absolute;
   width: 18px;
-  top: 48%;
-  left: 95%;
-  transform: translateX(50%);
+  top: 52%;
+  left: 90%;
+/*   transform: translateX(50%); */
 
 }
 .btn{
@@ -283,9 +283,9 @@ a{
 
     position: absolute;
      width: 18px;
-     top: 49%;
+     top: 52%;
      left: 90%;
-     transform: translateX(50%);
+/*      transform: translateX(50%); */
   }
 }
 
