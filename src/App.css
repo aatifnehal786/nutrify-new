@@ -26,6 +26,7 @@
   flex-direction: column;
   align-items: flex-start;
   
+  
  
 
 }
@@ -36,10 +37,9 @@
  outline: none;
  border: 1px solid gray;
  border-radius: 10px;
-  position: relative;
+ position: relative;
 
 }
-
 .form img{
   position: absolute;
   width: 18px;
@@ -277,6 +277,7 @@ a{
 .btn2{
   color: antiquewhite;
 }
+
 
 @media (min-width:450px) and (max-width:1800px){
   .form img{
